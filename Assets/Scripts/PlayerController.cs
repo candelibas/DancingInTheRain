@@ -32,6 +32,31 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        print(collision.gameObject.name);
+        /* Death collision conditions */
+        // Person
+        if (collision.gameObject.tag == "Puddle")
+        {
+
+        }
+        // Biker
+        if (collision.gameObject.tag == "Biker")
+        {
+
+        }
+        // Manhole (not manhole cover)
+        if (collision.gameObject.tag == "Manhole")
+        {
+
+        }
+        // Cat
+        if (collision.gameObject.tag == "Cat")
+        {
+
+        }
+        // Puddle
+        if (collision.gameObject.tag == "Puddle")
+        {
+
+        }
     }
 }
