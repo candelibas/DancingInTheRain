@@ -18,10 +18,11 @@ public class Puddle : MonoBehaviour
 
             // bomb the particle effect!
             Instantiate(particleEffect, transform.position, Quaternion.identity);
-            // todo: play sound
+            // todo: play click sound
         }
         else // big & medium puddles
         {
+            // todo: play click sound
             gameObject.SetActive(false);
             subTarget.SetActive(true);
         }

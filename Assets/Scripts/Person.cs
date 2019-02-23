@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Person : MonoBehaviour
 {
-    private Vector3 screenPoint;
-    private Vector3 offset;
+    //private Vector3 screenPoint;
+    //private Vector3 offset;
 
     void Start()
     {
@@ -18,6 +18,7 @@ public class Person : MonoBehaviour
         
     }
     
+    /* Dragging 
     void OnMouseDown()
     {
         screenPoint = Camera.main.WorldToScreenPoint(transform.position);
@@ -30,5 +31,6 @@ public class Person : MonoBehaviour
         Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
         transform.position = curPosition;
     }
-   
+    */
+
 }

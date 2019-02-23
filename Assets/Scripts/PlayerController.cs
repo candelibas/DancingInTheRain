@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     
     private Rigidbody2D rb;
     private Vector2 moveVelocity;
-    
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
         // Manhole (not manhole cover)
         if (collision.gameObject.tag == "Manhole")
         {
-
+            print("manhoole deaadd");
         }
         // Cat
         if (collision.gameObject.tag == "Cat")
