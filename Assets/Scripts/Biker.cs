@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Biker : MonoBehaviour
 {
+    public float bikeSpeed = 3f;
+    private float boostSpeed = 1f;
 
     void Start()
     {
@@ -12,6 +14,11 @@ public class Biker : MonoBehaviour
 
     void Update()
     {
-        
+        transform.Translate(Vector2.up * bikeSpeed * boostSpeed * Time.deltaTime);
+    }
+
+    private void OnMouseDown()
+    {
+        boostSpeed = 3f;
     }
 }
