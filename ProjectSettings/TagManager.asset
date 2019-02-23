@@ -9,6 +9,7 @@ TagManager:
   - Biker
   - Manhole
   - Cat
+  - Wall
   layers:
   - Default
   - TransparentFX

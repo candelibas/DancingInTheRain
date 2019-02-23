@@ -10,21 +10,45 @@ public class Puddle : MonoBehaviour
     [SerializeField]
     private GameObject particleEffect;
 
+    [SerializeField]
+    private AudioClip explosionSound;
+    [SerializeField]
+    private AudioClip puddleClickSound;
+    AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     private void OnMouseDown()
     {
         if(subTarget == null) // small puddle
         {
-            gameObject.SetActive(false);
-
             // bomb the particle effect!
             Instantiate(particleEffect, transform.position, Quaternion.identity);
-            // todo: play click sound
+
+            gameObject.SetActive(false);
+            
+            
         }
         else // big & medium puddles
         {
-            // todo: play click sound
             gameObject.SetActive(false);
             subTarget.SetActive(true);
         }
     }
+
+    private void OnDisable()
+    {   
+        if(subTarget == null)
+        {
+            audioSource.PlayOneShot(explosionSound, 1f);
+        }
+        else
+        {
+            audioSource.PlayOneShot(puddleClickSound, 1f);
+        }
+    }
+
 }

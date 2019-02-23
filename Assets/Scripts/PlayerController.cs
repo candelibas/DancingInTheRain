@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
         // Manhole (not manhole cover)
         if (collision.gameObject.tag == "Manhole")
         {
-            print("manhoole deaadd");
+            
         }
         // Cat
         if (collision.gameObject.tag == "Cat")
@@ -55,6 +55,11 @@ public class PlayerController : MonoBehaviour
         }
         // Puddle
         if (collision.gameObject.tag == "Puddle")
+        {
+
+        }
+        // Wall
+        if (collision.gameObject.tag == "Wall")
         {
 
         }

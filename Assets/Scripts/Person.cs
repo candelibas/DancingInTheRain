@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,11 @@ public class Person : MonoBehaviour
     //private Vector3 screenPoint;
     //private Vector3 offset;
 
+    public bool clicked = false;
+
+    [SerializeField]
+    private Transform targetWay;
+
     void Start()
     {
         
@@ -14,8 +20,14 @@ public class Person : MonoBehaviour
 
     void Update()
     {
-       
-        
+        transform.DOMoveY(-10, 15).OnComplete(() => {
+            Destroy(gameObject);
+        });
+    }
+
+    void OnMouseDown()
+    {
+        transform.DOMoveX(-5, 5);
     }
     
     /* Dragging 
