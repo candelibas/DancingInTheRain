@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PlayerController : MonoBehaviour
 {
@@ -46,7 +47,13 @@ public class PlayerController : MonoBehaviour
         // Manhole (not manhole cover)
         if (collision.gameObject.tag == "Manhole")
         {
-            
+            var targetPos = new Vector3(collision.gameObject.transform.position.x, 
+            collision.gameObject.transform.position.y, collision.gameObject.transform.position.z);
+            transform.DOMove(targetPos, 1);
+
+            var newScale = new Vector3(0, 0, 0);
+            transform.DOScale(newScale, 2);
+            twirlSpeed = twirlSpeed * 1.5f;
         }
         // Cat
         if (collision.gameObject.tag == "Cat")

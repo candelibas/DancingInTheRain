@@ -10,6 +10,7 @@ TagManager:
   - Manhole
   - Cat
   - Wall
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX
