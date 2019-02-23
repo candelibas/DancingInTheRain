@@ -193,6 +193,8 @@ GameObject:
   - component: {fileID: 78509611}
   - component: {fileID: 78509610}
   - component: {fileID: 78509613}
+  - component: {fileID: 78509615}
+  - component: {fileID: 78509614}
   m_Layer: 0
   m_Name: BrunetteWoman
   m_TagString: Person
@@ -350,6 +352,41 @@ PolygonCollider2D:
       - {x: -0.285, y: -0.895}
       - {x: -0.255, y: -0.73499995}
       - {x: -0.21499999, y: -0.565}
+--- !u!114 &78509614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78509609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b72a071c6754ddfaf1123d2a8fef83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clicked: 0
+  targetWay: {fileID: 0}
+--- !u!50 &78509615
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78509609}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &91023063
 GameObject:
   m_ObjectHideFlags: 0
@@ -11952,6 +11989,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1601282090}
   - component: {fileID: 1601282091}
+  - component: {fileID: 1601282092}
   m_Layer: 0
   m_Name: CamCollider
   m_TagString: Untagged
@@ -11999,6 +12037,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 19.082241, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &1601282092
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601282089}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1601300155
 GameObject:
   m_ObjectHideFlags: 0
@@ -12445,6 +12504,7 @@ GameObject:
   - component: {fileID: 1800324795}
   - component: {fileID: 1800324794}
   - component: {fileID: 1800324793}
+  - component: {fileID: 1800324798}
   - component: {fileID: 1800324797}
   m_Layer: 0
   m_Name: Blondewoman
@@ -12452,7 +12512,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!60 &1800324793
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -12595,7 +12655,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800324792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.6585274, y: -0.4548354, z: 0}
+  m_LocalPosition: {x: 0.48, y: 8.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12614,7 +12674,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clicked: 0
-  targetWay: {fileID: 0}
+  targetWay: {fileID: 1857650153}
+--- !u!50 &1800324798
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800324792}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1837580682
 GameObject:
   m_ObjectHideFlags: 0
@@ -12812,8 +12893,9 @@ GameObject:
   - component: {fileID: 1851615889}
   - component: {fileID: 1851615888}
   - component: {fileID: 1851615887}
-  - component: {fileID: 1851615886}
+  - component: {fileID: 1851615891}
   - component: {fileID: 1851615890}
+  - component: {fileID: 1851615886}
   m_Layer: 0
   m_Name: BlondeMan
   m_TagString: Person
@@ -12834,7 +12916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clicked: 0
-  targetWay: {fileID: 0}
+  targetWay: {fileID: 1601300156}
 --- !u!95 &1851615887
 Animator:
   serializedVersion: 3
@@ -12910,7 +12992,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1851615885}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.58, y: 7.04, z: 0}
+  m_LocalPosition: {x: 0.69, y: 8.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12979,6 +13061,27 @@ PolygonCollider2D:
       - {x: 0.545, y: -0.85499996}
       - {x: 0.59499997, y: -0.625}
       - {x: 0.615, y: -0.525}
+--- !u!50 &1851615891
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851615885}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1857650152
 GameObject:
   m_ObjectHideFlags: 0
@@ -13173,6 +13276,8 @@ GameObject:
   - component: {fileID: 1900699797}
   - component: {fileID: 1900699796}
   - component: {fileID: 1900699799}
+  - component: {fileID: 1900699801}
+  - component: {fileID: 1900699800}
   m_Layer: 0
   m_Name: YellowShirtWoman
   m_TagString: Person
@@ -13343,6 +13448,41 @@ PolygonCollider2D:
       - {x: -0.34, y: -1.125}
       - {x: -0.28, y: -0.875}
       - {x: -0.26, y: -0.775}
+--- !u!114 &1900699800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900699795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b72a071c6754ddfaf1123d2a8fef83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clicked: 0
+  targetWay: {fileID: 0}
+--- !u!50 &1900699801
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900699795}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1967582307
 GameObject:
   m_ObjectHideFlags: 0
@@ -18062,6 +18202,8 @@ GameObject:
   - component: {fileID: 2070481869}
   - component: {fileID: 2070481868}
   - component: {fileID: 2070481871}
+  - component: {fileID: 2070481873}
+  - component: {fileID: 2070481872}
   m_Layer: 0
   m_Name: YellowShirtMan
   m_TagString: Person
@@ -18222,6 +18364,41 @@ PolygonCollider2D:
       - {x: -0.32999998, y: -0.955}
       - {x: -0.31, y: -0.835}
       - {x: -0.26, y: -0.705}
+--- !u!114 &2070481872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070481867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b72a071c6754ddfaf1123d2a8fef83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clicked: 0
+  targetWay: {fileID: 0}
+--- !u!50 &2070481873
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070481867}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &2108709176
 GameObject:
   m_ObjectHideFlags: 0
