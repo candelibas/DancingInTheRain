@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
             var newScale = new Vector3(0, 0, 0);
             twirlSpeed = twirlSpeed * 1.5f;
             transform.DOScale(newScale, 2).OnComplete(() => {
-
+                // todo: play girl manhole sound
             });
             
         }

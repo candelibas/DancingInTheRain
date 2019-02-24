@@ -13,11 +13,14 @@ public class Person : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    [SerializeField]
-    private Transform targetWay;
+    private GameObject[] startingPoints;
 
     void Start()
     {
+        if(startingPoints == null)
+        {
+            startingPoints = GameObject.FindGameObjectsWithTag("StartPoint");
+        }
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -36,6 +39,7 @@ public class Person : MonoBehaviour
     {
         if(keepTweening)
         {
+            GameObject targetWay = startingPoints[Random.Range(0, startingPoints.Length)];
             // todo: add click sound
             transform.DOMoveX(targetWay.transform.position.x, 4);
         }

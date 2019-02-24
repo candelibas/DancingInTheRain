@@ -11,6 +11,7 @@ TagManager:
   - Cat
   - Wall
   - SpawnPoint
+  - StartPoint
   layers:
   - Default
   - TransparentFX
