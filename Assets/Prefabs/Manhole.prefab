@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetManhole: {fileID: 9004606229751073650}
-  timeToComplete: 1
+  timeToComplete: 0.7
   dragSound: {fileID: 8300000, guid: c9c96984cd005594686dbc979326cbe3, type: 3}
   fitSound: {fileID: 8300000, guid: 126d25ca8999e034f9c5025f5ecfd779, type: 3}
 --- !u!82 &5679045947674264199

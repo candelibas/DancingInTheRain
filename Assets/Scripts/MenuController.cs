@@ -12,16 +12,6 @@ public class MenuController : MonoBehaviour
     public Image black;
     public Animator anim;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void ChangeScene()
     {
         StartCoroutine(Fading());

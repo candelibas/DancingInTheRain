@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -38,12 +39,12 @@ public class PlayerController : MonoBehaviour
         // Person
         if (tag == "Person")
         {
-            
+            SceneManager.LoadScene(3);
         }
         // Biker
         if (tag == "Biker")
         {
-
+            SceneManager.LoadScene(3);
         }
         // Manhole (not manhole cover)
         if (tag == "Manhole")
@@ -56,23 +57,29 @@ public class PlayerController : MonoBehaviour
             twirlSpeed = twirlSpeed * 1.5f;
             transform.DOScale(newScale, 2).OnComplete(() => {
                 // todo: play girl manhole sound
+                SceneManager.LoadScene(3);
             });
             
         }
         // Cat
         if (tag == "Cat")
         {
-
+            SceneManager.LoadScene(3);
         }
         // Puddle
         if (tag == "Puddle")
         {
-
+            SceneManager.LoadScene(3);
         }
         // Wall
         if (tag == "Wall")
         {
-
+            SceneManager.LoadScene(3);
+        }
+        // Car
+        if(tag == "Car")
+        {
+            SceneManager.LoadScene(3);
         }
     }
 }

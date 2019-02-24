@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed0120eae405b0b4ebec2b0beef78442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bikeSpeed: 3
+  bikeSpeed: 5
   sound: {fileID: 8300000, guid: 0f09dfe0a33a2184e868f1e841be7f19, type: 3}
 --- !u!82 &296618734262788010
 AudioSource:
