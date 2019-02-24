@@ -12,9 +12,14 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveVelocity;
 
+    [SerializeField]
+    private AudioClip fallSound;
+    AudioSource audioSource;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -49,6 +54,7 @@ public class PlayerController : MonoBehaviour
         // Manhole (not manhole cover)
         if (tag == "Manhole")
         {
+            audioSource.PlayOneShot(fallSound, 1f);
             var targetPos = new Vector3(collision.gameObject.transform.position.x, 
             collision.gameObject.transform.position.y, collision.gameObject.transform.position.z);
             transform.DOMove(targetPos, 1);
@@ -56,7 +62,7 @@ public class PlayerController : MonoBehaviour
             var newScale = new Vector3(0, 0, 0);
             twirlSpeed = twirlSpeed * 1.5f;
             transform.DOScale(newScale, 2).OnComplete(() => {
-                // todo: play girl manhole sound
+                
                 SceneManager.LoadScene(3);
             });
             

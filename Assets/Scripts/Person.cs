@@ -17,6 +17,12 @@ public class Person : MonoBehaviour
 
     private float startPoint;
 
+    //[SerializeField]
+    //private AudioClip[] sounds;
+
+    [SerializeField]
+    private AudioSource[] audios;
+
     void Start()
     {
         if(startingPoints == null)
@@ -26,6 +32,8 @@ public class Person : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         startPoint = transform.position.y;
+
+        AudioSource[] audios = gameObject.GetComponents<AudioSource>();
     }
 
     void Update()
@@ -43,6 +51,14 @@ public class Person : MonoBehaviour
     {
         if(keepTweening)
         {
+
+            if(audios != null)
+            {
+                int clipPick = Random.Range(0, audios.Length);
+                audios[clipPick].Play();
+            }
+            
+
             GameObject targetWay = startingPoints[Random.Range(0, startingPoints.Length)];
             // todo: add click sound
             transform.DOMoveX(targetWay.transform.position.x, 4);

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraController : MonoBehaviour
 {
@@ -8,11 +9,6 @@ public class CameraController : MonoBehaviour
 
     [SerializeField]
     private Transform wayPoint;
-
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
@@ -22,11 +18,19 @@ public class CameraController : MonoBehaviour
         {
             // stop camera
             cameraPosition.y = wayPoint.position.y;
+
+            // The end!
+            Invoke("GoEndingScene", 2f);
         }
         else
         {
             cameraPosition.y += step;
             Camera.main.gameObject.transform.position = cameraPosition;
         }
+    }
+
+    void GoEndingScene()
+    {
+        SceneManager.LoadScene(5);
     }
 }

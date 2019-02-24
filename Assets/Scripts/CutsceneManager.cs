@@ -9,6 +9,9 @@ public class CutsceneManager : MonoBehaviour
     [SerializeField]
     private Image nextCutScene;
 
+    [SerializeField]
+    private bool end = false;
+
     public void AnimationComplete()
     {
         if(nextCutScene != null)
@@ -17,8 +20,15 @@ public class CutsceneManager : MonoBehaviour
         }
         else
         {
-            // Go to gameplay scene
-            SceneManager.LoadScene(1);
+            if(end)
+            {
+                SceneManager.LoadScene(0);
+            }
+            else
+            { 
+                // Go to gameplay scene
+                SceneManager.LoadScene(1);
+            }
         }
 
     }
