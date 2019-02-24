@@ -8,11 +8,6 @@ public class CutsceneManager : MonoBehaviour
 {
     [SerializeField]
     private Image nextCutScene;
-    
-    void Start()
-    {
-        
-    }
 
     public void AnimationComplete()
     {
