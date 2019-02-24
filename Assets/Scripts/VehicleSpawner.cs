@@ -8,6 +8,9 @@ public class VehicleSpawner : MonoBehaviour
     [SerializeField]
     private GameObject[] vehiclePrefabs;
 
+    [SerializeField]
+    private GameObject bikeSpawnPoint;
+    
     void Start()
     {
         InvokeRepeating("SpawnVehicle", 1f, 5f);
@@ -16,6 +19,7 @@ public class VehicleSpawner : MonoBehaviour
     void SpawnVehicle()
     {
         Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y, 0);
-        Instantiate(vehiclePrefabs[Random.Range(0, vehiclePrefabs.Length)], spawnPos, Quaternion.identity);
+        GameObject newIns = Instantiate(vehiclePrefabs[Random.Range(0, vehiclePrefabs.Length)], spawnPos, Quaternion.identity);
+
     }
 }

@@ -15,6 +15,8 @@ public class Person : MonoBehaviour
 
     private GameObject[] startingPoints;
 
+    private float startPoint;
+
     void Start()
     {
         if(startingPoints == null)
@@ -22,13 +24,15 @@ public class Person : MonoBehaviour
             startingPoints = GameObject.FindGameObjectsWithTag("StartPoint");
         }
         rb = GetComponent<Rigidbody2D>();
+
+        startPoint = transform.position.y;
     }
 
     void Update()
     {
         if(keepTweening)
         {
-            transform.DOMoveY(-10, 15).OnComplete(() => {
+            transform.DOMoveY(startPoint - 15, 15).OnComplete(() => {
                 Destroy(gameObject);
             });
         }

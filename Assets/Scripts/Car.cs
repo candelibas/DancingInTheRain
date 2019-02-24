@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Car : MonoBehaviour
 {
-    public float bikeSpeed = 3f;
-    private float boostSpeed = 1f;
 
     [SerializeField]
     private AudioClip sound;
