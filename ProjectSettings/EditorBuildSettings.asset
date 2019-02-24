@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Failed.unity
     guid: 97073ef3ba9ac31498b261b68f2d0d90
+  - enabled: 1
+    path: Assets/Scenes/BeginningCutScene.unity
+    guid: 956e1410ecd884d179ae75e28d754d99
   m_configObjects: {}
