@@ -19,8 +19,8 @@ public class Car : MonoBehaviour
         });
     }
 
-    void Update()
+    private void OnMouseDown()
     {
-        
+        audioSource.PlayOneShot(sound, 1f);
     }
 }
