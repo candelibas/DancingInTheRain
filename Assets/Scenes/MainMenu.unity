@@ -672,6 +672,7 @@ GameObject:
   - component: {fileID: 869300447}
   - component: {fileID: 869300446}
   - component: {fileID: 869300445}
+  - component: {fileID: 869300448}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -738,7 +739,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 869300446}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 869300448}
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &869300446
@@ -778,6 +790,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 869300443}
   m_CullTransparentMesh: 0
+--- !u!114 &869300448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869300443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a1b59528c5ca0d4dbc103117f838767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
+  sceneName: 
+  black: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &902591764
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,7 +1049,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1247685612
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1074,7 +1102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
