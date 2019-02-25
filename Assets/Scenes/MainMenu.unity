@@ -1110,7 +1110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a1b59528c5ca0d4dbc103117f838767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 1
+  index: 4
   sceneName: Game
   black: {fileID: 1247685614}
   anim: {fileID: 1247685613}
