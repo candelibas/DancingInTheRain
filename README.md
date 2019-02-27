@@ -4,7 +4,7 @@ This game was created for JamDNA-5.
 
 Download on Windows or MacOS: https://babutsa.itch.io/dancing-in-the-rain
 
-***Credits:***
+### ***Credits:***
 
 **Art:** Alice Mao
 
