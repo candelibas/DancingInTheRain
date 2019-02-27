@@ -8,6 +8,6 @@ Download on Windows or MacOS: https://babutsa.itch.io/dancing-in-the-rain
 
 **Art:** Alice Mao
 
-**Programming:** Can Delibass
+**Programming:** Can Delibas
 
 **Sound:** Harry Pepe IV
